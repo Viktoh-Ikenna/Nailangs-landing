@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,7 +6,7 @@ export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Link href="/" className="focus-ring group inline-flex items-center gap-2.5 rounded-xl" aria-label="Nailangs home">
       <Image
-        src="/images/nailangs-icon.png"
+        src={asset("/images/nailangs-icon.png")}
         alt=""
         width={40}
         height={40}

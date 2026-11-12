@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,7 +45,7 @@ export default function AboutPage() {
         <Reveal>
           <div className="relative aspect-[3/2] overflow-hidden rounded-[2rem]">
             <Image
-              src="/images/founder-story.jpg"
+              src={asset("/images/founder-story.jpg")}
               alt="A woman in a blue print dress types on a laptop at a sunny desk"
               fill
               priority
@@ -116,7 +117,7 @@ export default function AboutPage() {
         <Reveal delay={0.1}>
           <div className="relative aspect-[3/2] overflow-hidden rounded-[2rem]">
             <Image
-              src="/images/family.jpg"
+              src={asset("/images/family.jpg")}
               alt="A grandmother laughs as her granddaughter shows her a message on a phone"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

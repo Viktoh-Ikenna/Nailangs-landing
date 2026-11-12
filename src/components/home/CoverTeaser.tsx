@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "../Reveal";
@@ -28,7 +29,7 @@ export function CoverTeaser() {
           <Reveal delay={0.1}>
             <div className="animate-float">
               <Image
-                src="/images/silicone-cover.png"
+                src={asset("/images/silicone-cover.png")}
                 alt="The green Nailangs silicone keyboard cover, showing the special letters on its keys"
                 width={1000}
                 height={420}

@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import { features } from "@/content/site";
 import { Reveal, SectionHeading } from "../Reveal";
@@ -21,7 +22,7 @@ export function Features() {
         <Reveal className="md:col-span-4 md:row-span-2">
           <article className="group relative h-full min-h-[420px] overflow-hidden rounded-[2rem] bg-forest">
             <Image
-              src="/images/family.jpg"
+              src={asset("/images/family.jpg")}
               alt="A grandmother laughs as her granddaughter shows her a message on a phone"
               fill
               sizes="(min-width: 768px) 66vw, 100vw"

@@ -1,5 +1,8 @@
+import { asset } from "@/lib/asset";
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
+
+export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -10,6 +13,6 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     background_color: "#f8f5ec",
     theme_color: "#14452a",
-    icons: [{ src: "/images/nailangs-icon.png", sizes: "1024x1024", type: "image/png" }],
+    icons: [{ src: asset("/images/nailangs-icon.png"), sizes: "1024x1024", type: "image/png" }],
   };
 }

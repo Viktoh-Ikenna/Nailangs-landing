@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +36,7 @@ export default function CoverPage() {
         <Reveal>
           <div className="grain relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-lime to-sun px-6 py-16 sm:px-14">
             <Image
-              src="/images/silicone-cover.png"
+              src={asset("/images/silicone-cover.png")}
               alt="The green Nailangs silicone keyboard cover"
               width={1000}
               height={420}
@@ -73,7 +74,7 @@ export default function CoverPage() {
         <Reveal>
           <div className="relative aspect-[1006/612] overflow-hidden rounded-[2rem]">
             <Image
-              src="/images/silicone-cover-desk.jpg"
+              src={asset("/images/silicone-cover-desk.jpg")}
               alt="The Nailangs cover on a keyboard on a wooden desk, beside a phone and a mouse"
               fill
               sizes="(min-width: 1024px) 70vw, 100vw"

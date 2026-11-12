@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "../Reveal";
@@ -9,7 +10,7 @@ export function Story() {
         <Reveal className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2.2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
             <Image
-              src="/images/founder-story.jpg"
+              src={asset("/images/founder-story.jpg")}
               alt="A woman in a blue print dress types on a laptop at a sunny desk"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
